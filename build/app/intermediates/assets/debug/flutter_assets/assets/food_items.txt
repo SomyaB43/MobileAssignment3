@@ -1,0 +1,47 @@
+Chocolate, 15.00
+Burger, 8.00
+Pasta, 12.50
+Shawarma, 6.00
+Salad, 20.00
+Burritos, 10.00
+Ice Cream, 5.50
+Fries, 3.00
+Spaghetti, 25.00
+Waffles, 7.00
+Pancakes, 5.00
+Pastry, 9.00
+Popcorn, 4.00
+Nuggets, 3.50
+Soup, 6.50
+Gummy Bears, 11.00
+Noodles, 7.50
+Donuts, 4.50
+Bagel, 30.00
+Chili, 8.50
+
+class FoodItem {
+  final int id;
+  final String name;
+  final double cost;
+
+  FoodItem({required this.id, required this.name, required this.cost});
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'cost': cost,
+    };
+  }
+
+  // Convert a Map into a FoodItem object
+  factory FoodItem.fromMap(Map<String, dynamic> map) {
+    return FoodItem(
+      id: map['id'],
+      name: map['name'],
+      cost: map['cost'],
+    );
+  }
+}
+
+
